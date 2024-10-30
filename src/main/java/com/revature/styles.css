@@ -1,53 +1,109 @@
-/* Below are styles that are optional to use. You can choose to incorporate your own CSS styles. */
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-header, footer {
-    background-color: #333;
+header {
+    background-color: #6200ea;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 1em 0;
 }
 
 main {
-    padding: 2rem;
+    padding: 20px;
 }
 
-#search-form {
-    gap: 1rem;
-    margin-bottom: 1rem;
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
+input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+}
 
-#filter-sort {
-    justify-content: space-between;
-    margin-bottom: 1rem;
+button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3700b3;
 }
 
 #book-list {
     list-style-type: none;
+    padding: 0;
 }
 
 .book-item {
-    border: 1px solid #ddd;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .book-item img {
-    max-width: 100%;
+    width: 50px;
+    height: 75px;
+    margin-right: 15px;
+}
+
+.title-element {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.rating-element, .author-element, .ebook-element {
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+
+#selected-book img {
+    width: 200px;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 #selected-book {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-top: 1rem;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .book-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rating-element, .author-element, .ebook-element {
+        margin-left: 0;
+    }
+}
